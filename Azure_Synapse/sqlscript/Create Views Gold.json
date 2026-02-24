@@ -1,0 +1,17 @@
+{
+	"name": "Create Views Gold",
+	"properties": {
+		"content": {
+			"query": "-- Create View Calendar\n-----------------------------------------------------------------------------------------\nCREATE VIEW gold.calendar\nAS\nSELECT * FROM OPENROWSET\n( \n    BULK 'https://akhilawstoragedatalake.dfs.core.windows.net/silver/Calendar/',\n    FORMAT = 'PARQUET'\n    ) AS QUERY1\n\n-- Create View Customers\n-----------------------------------------------------------------------------------------\nCREATE VIEW gold.Customers\nAS\nSELECT * FROM OPENROWSET\n( \n    BULK 'https://akhilawstoragedatalake.dfs.core.windows.net/silver/Customers/',\n    FORMAT = 'PARQUET'\n    ) AS QUERY2\n\n-- Create View Product_Category\n-----------------------------------------------------------------------------------------\nCREATE VIEW gold.Product_Category\nAS\nSELECT * FROM OPENROWSET\n( \n    BULK 'https://akhilawstoragedatalake.dfs.core.windows.net/silver/Product_Category/',\n    FORMAT = 'PARQUET'\n    ) AS QUERY3\n\n-- Create View Product_Subcategories\n-----------------------------------------------------------------------------------------\nCREATE VIEW gold.Product_Subcategories\nAS\nSELECT * FROM OPENROWSET\n( \n    BULK 'https://akhilawstoragedatalake.dfs.core.windows.net/silver/Product_Subcategories/',\n    FORMAT = 'PARQUET'\n    ) AS QUERY4\n\n-- Create View Products\n-----------------------------------------------------------------------------------------\nCREATE VIEW gold.Products\nAS\nSELECT * FROM OPENROWSET\n( \n    BULK 'https://akhilawstoragedatalake.dfs.core.windows.net/silver/Products/',\n    FORMAT = 'PARQUET'\n    ) AS QUERY5\n\n\n-- Create View Returns\n-----------------------------------------------------------------------------------------\nCREATE VIEW gold.Returns\nAS\nSELECT * FROM OPENROWSET\n( \n    BULK 'https://akhilawstoragedatalake.dfs.core.windows.net/silver/Returns/',\n    FORMAT = 'PARQUET'\n    ) AS QUERY6\n\n-- Create View Sales\n-----------------------------------------------------------------------------------------\nCREATE VIEW gold.Sales\nAS\nSELECT * FROM OPENROWSET\n( \n    BULK 'https://akhilawstoragedatalake.dfs.core.windows.net/silver/Sales/',\n    FORMAT = 'PARQUET'\n    ) AS QUERY7\n\n-- Create View Territories\n-----------------------------------------------------------------------------------------\nCREATE VIEW gold.Territories\nAS\nSELECT * FROM OPENROWSET\n( \n    BULK 'https://akhilawstoragedatalake.dfs.core.windows.net/silver/Territories/',\n    FORMAT = 'PARQUET'\n    ) AS QUERY8\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "awdatabase",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
