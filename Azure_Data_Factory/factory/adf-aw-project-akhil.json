@@ -1,0 +1,9 @@
+{
+	"name": "adf-aw-project-akhil",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "10c6f8ae-1343-418d-99fe-469a3d7f6773",
+		"tenantId": "8e2a0fc2-01a4-4b7c-985e-d3f82d345834"
+	}
+}
